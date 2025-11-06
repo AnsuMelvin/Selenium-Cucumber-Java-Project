@@ -1,13 +1,10 @@
 package com.fdmgroup.pages;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

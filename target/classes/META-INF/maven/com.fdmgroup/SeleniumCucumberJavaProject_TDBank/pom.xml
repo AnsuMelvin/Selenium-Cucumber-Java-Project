@@ -10,6 +10,7 @@
 		<maven.compiler.target>21</maven.compiler.target>
 		<maven.compiler.source>21</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<allure.version>2.30.0</allure.version>
 	</properties>
 	<dependencies>
 	<!--
@@ -45,5 +46,27 @@
 			<artifactId>jna</artifactId>
 			<version>5.14.0</version>
 		</dependency>
+		<dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-cucumber7-jvm</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-junit4</artifactId>
+        <scope>test</scope>
+    </dependency>
 	</dependencies>
+	<!-- Add allure-bom to dependency management to ensure correct versions of all the dependencies are used -->
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-bom</artifactId>
+            <version>${allure.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 </project>
